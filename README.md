@@ -14,7 +14,7 @@
 
 ## Блок 2. Функции, автотесты и ООП
 
-2.1. [ ] [Функции, автотесты и Continuous Integration](04_functions)
+2.1. [x] [Функции, автотесты и Continuous Integration](04_functions)
 
 2.2. [ ] [ООП: Объекты и классы](05_objects)
 
