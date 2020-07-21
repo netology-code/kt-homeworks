@@ -24,7 +24,7 @@
 
 3.1. [x] [Исключения](07_exceptions)
 
-3.2. [ ] [Generics и коллекции](08_collections)
+3.2. [x] [Generics и коллекции](08_collections)
 
 3.3. [ ] [Лямбды, extension-функции, операторы](09_lambda)
 
