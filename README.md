@@ -26,7 +26,9 @@
 
 3.2. [x] [Generics и коллекции](08_collections)
 
-3.3. [ ] [Лямбды, extension-функции, операторы](09_lambda)
+3.3. [x] [Лямбды, extension-функции, операторы](09_lambda)
+
+3.4. [ ] [Sequences](10_sequences)
 
 Доп.материалы: см. в репозитории [кодом](https://github.com/netology-code/kt-code).
 
