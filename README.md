@@ -30,6 +30,8 @@
 
 3.4. [x] [Sequences](10_sequences)
 
+3.4. [ ] [Sequences](10_sequences)
+
 Доп.материалы: см. в репозитории [кодом](https://github.com/netology-code/kt-code).
 
 По всем вопросам: coursar
