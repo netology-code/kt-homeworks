@@ -132,3 +132,62 @@ jobs:
 1. К репозиторию должен быть подключен GitHub Actions
 1. В истории должен быть хотя бы один коммит, ломающий сборку
 
+### Возможные проблемы и их решения
+
+В случае, если тесты проходят, но при запуске команды `gradle test jacocoTestReport` получается похожая картина:
+
+![image](https://user-images.githubusercontent.com/13727567/112562424-46854400-8de8-11eb-978f-2668f981ca58.png)
+
+Следует убедиться, что используется JDK версии 14 или ниже. Для этого идём в File -> Project Structure
+
+![image](https://user-images.githubusercontent.com/13727567/112562737-096d8180-8de9-11eb-9ad4-77127976f3f8.png)
+
+На вкладке Project проверяем версию. Меняем в случае необходимости
+
+![image](https://user-images.githubusercontent.com/13727567/112562819-36ba2f80-8de9-11eb-93ec-fe83263d5e23.png)
+
+Если Jacoco отказывается работать даже в этом случае, следует изменить ваш `gradle.yml` на следующий вариант:
+
+```yml
+name: Kotlin CI with Gradle
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew test jacocoTestReport
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+          name: jacoco_reports
+          path: build/reports/jacoco/test/html
+
+```
+В таком случае Jacoco отчёт будет сгенерирован на каждый пуш в master/main ветку. Либо на каждый пуш в ветку, на которую открыт PR в master/main. И загружен на Github в виде артефакта для дальнейшего скачивания.
+
+Скачать и посмотреть отчёт можно следующим образом:
+
+Нажимаем на статус сборки, переходим в детали
+![image](https://user-images.githubusercontent.com/13727567/112563989-741fbc80-8deb-11eb-8567-b5a816db5520.png)
+
+Дожидаемся успешной сборки, если статус желтый. Далее скачиваем полученный архив
+![image](https://user-images.githubusercontent.com/13727567/112564243-f7411280-8deb-11eb-8530-4f615ba50caf.png)
+
+Далее распаковываем архив, смотрим результаты в index.html
+
