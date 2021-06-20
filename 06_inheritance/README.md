@@ -108,15 +108,14 @@
 <details>
 <summary>Подсказка</summary>
 
-Не забывайте, что вам нужен `type`. В случае Sealed классов это будет выглядеть вот так:
+Не забывайте, что у всех наследников есть общее поле `type`. Для Sealed классов возможна следующая реализация:
 ```kotlin
-sealed class Attachment {
-    abstract val type: String
-}
-data class VideoAttachment(override val type: String, val video: Any) : Attachment()
+sealed class Attachment(val type: String)
+
+data class VideoAttachment(val video: Any) : Attachment("video")
 
 fun main() {
-    val attachment: Attachment = VideoAttachment("video", "stuff")
+    val attachment: Attachment = VideoAttachment("stuff")
     println(attachment.type)
 }
 ```
