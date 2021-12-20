@@ -112,7 +112,7 @@
 ```kotlin
 sealed class Attachment(val type: String)
 
-data class VideoAttachment(val video: Any) : Attachment("video")
+data class VideoAttachment(val video: Video) : Attachment("video")
 
 fun main() {
     val attachment: Attachment = VideoAttachment("stuff")
