@@ -46,7 +46,7 @@
 
 ![](pic/actions1.png)
 
-GitHub Actions предложить вам настроить Simple Workflow, соглашаемся:
+GitHub Actions предложит вам один или несколько Workflow по умолчанию, но лучше выбрать "setup a workflow yourself":
 
 ![](pic/actions2.png)
 
