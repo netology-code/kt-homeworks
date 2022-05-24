@@ -24,22 +24,22 @@
 
 Мы продолжаем развивать наш сервис с постами и решили внедрить в него возможность комментирования постов.
 
-В чём суть? Вы создаёте метод `createComment` внутри `WallService`:
+В чём суть? Нужно добавить метод `createComment` в `WallService`:
 
 ```kotlin
 class WallService {
     private var posts = emptyArray<Post>()
     private var comments = emptyArray<Comment>()
 
-    fun createComment(postId: Int, comment: Comment) {
+    fun createComment(postId: Int, comment: Comment): Comment {
         TODO()
     }
 }
 ```
 
-Данная функция сначала должна проверить, существует ли в массиве `posts` пост с id равным `postId`. Если существует, то добавляет комментарий в массив `comments`.
+Данная функция сначала должна проверить, существует ли в массиве `posts` пост с id равным `postId`. Если существует, то добавить комментарий в массив `comments` и вернуть только что добавленный комментарий.
 
-А вот если не существует - выкидывает исключение `PostNotFoundException`.
+А вот если не существует - выкинуть исключение `PostNotFoundException`.
 
 Спроектировать класс для комментариев вам нужно самостоятельно на базе описания типа [Comment](https://vk.com/dev/objects/comment). По традиции, есть [сохранённая копия](assets/comment.pdf).
 
