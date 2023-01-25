@@ -36,7 +36,7 @@
 
 Если возникают проблемы с генерацией отчёта, смотрите [соответствующий раздел.](https://github.com/netology-code/kt-homeworks/blob/master/04_functions/README.md#%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D0%B8-%D0%B8%D1%85-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F)
 
-Если тесты не запускаются или происходят непонятные проблемы с jacoco, удалите из build.gradle следующие строки:
+Если тесты не запускаются (выдается ошибка "Test events were not received") или происходят непонятные проблемы с jacoco, удалите из build.gradle следующие строки:
 
 ```
 test {
