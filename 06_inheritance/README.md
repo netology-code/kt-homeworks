@@ -53,17 +53,17 @@
         "type": "photo",
         "photo": {
             "id": 1,
-            "album_id": 1,
             "owner_id": 1,
-            "user_id": 1
+            "photo_130": "https://vk.com/some_photo_link",
+            "photo_604": "https://vk.com/another_photo_link"
         }
       }, {
         "type": "video",
         "video": {
             "id": 1,
-            "album_id": 1,
             "owner_id": 1,
-            "user_id": 1
+            "title": "A Funny Video",
+            "duration": 30
         }
       }
     ]
