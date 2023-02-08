@@ -161,6 +161,7 @@ object WallService {
 
     fun clear() {
         posts = emptyArray()
+        // также здесь нужно сбросить счетчик для id постов, если он у вас используется
     }
 }
 ```
