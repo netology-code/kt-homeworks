@@ -32,7 +32,7 @@
 При создании проекта используйте следующие настройки:
 ![](pic/idea-settings.png)
 
-В `build.gradle` поставьте самую последнюю версию плагина `org.jetbrains.kotlin.jvm`, доступную на https://plugins.gradle.org:
+В `build.gradle` поставьте самую последнюю стабильную (не `RC`, не `alpha` и не `beta`) версию плагина `org.jetbrains.kotlin.jvm`, доступную на https://plugins.gradle.org:
 
 ![](pic/gradle-plugins.png)
 
