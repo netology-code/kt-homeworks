@@ -26,8 +26,7 @@
 
 При этом:
 * groupId: ru.netology;
-* artifactId: first-app;
-* version: 1.0-SNAPSHOT.
+* artifactId: HelloKotlin.
 
 При создании проекта используйте следующие настройки:
 ![](pic/idea-settings.png)
