@@ -46,6 +46,7 @@
 В `build.gradle` поставьте самую последнюю стабильную версию плагина `org.jetbrains.kotlin.jvm`, доступную на https://plugins.gradle.org, не `RC`, не `alpha` и не `beta`.
 
 ![](pic/gradle-plugins.png)
+![](pic/gradle-versions.png)
 
 Итог: у вас должен быть репозиторий на GitHub, в котором будет ваш Gradle-проект.
 
